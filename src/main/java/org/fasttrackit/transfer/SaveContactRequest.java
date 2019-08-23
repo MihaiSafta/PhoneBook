@@ -1,18 +1,9 @@
-package org.fasttrackit.domain;
+package org.fasttrackit.transfer;
 
-public class PhoneBook {
-private long id;
-private String name;
-private String lastName;
-private int phoneNumber;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+public class SaveContactRequest {
+    private String name;
+    private String lastName;
+    int phoneNumber;
 
     public String getName() {
         return name;
@@ -40,9 +31,8 @@ private int phoneNumber;
 
     @Override
     public String toString() {
-        return "PhoneBook{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "SaveContactRequest{" +
+                "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 '}';
