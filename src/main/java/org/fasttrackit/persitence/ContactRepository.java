@@ -50,7 +50,7 @@ public class ContactRepository {
     }
 
     public void updateContact(long id, int phoneNumber) throws SQLException, IOException, ClassNotFoundException {
-        String sql = "UPDATE phonebook SET phonenumber = ?, WHERE id = ?";
+        String sql = "UPDATE phonebook SET PhoneNumber = ?, WHERE id = ?";
         try (Connection connection = db_configuration.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setLong(1,id);
